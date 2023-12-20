@@ -26,6 +26,10 @@ https://jestjs.io/pt-BR/docs/getting-started
 https://testing-library.com/docs/react-testing-library/intro/
 
 ---
+# Nextjs pacotes supabase
+
+npm i @supabase/auth-helpers-nestjs @supabase/supabase-js
+---
 # Configurar o Prisma
 
 npm install prisma --save-dev
@@ -36,4 +40,11 @@ npx prisma init
 ## Criar a migração do modelo
 npx prisma migrate dev --name create_tb_students
 
+Ver vídeos:
+https://www.youtube.com/watch?v=4x6V_r_XJBU
+
 ---
+
+---
+# Gerar chave ssh
+ssh-keygen -t rsa -b 4096 -C "prof.marcelopontes@gmail.com"
