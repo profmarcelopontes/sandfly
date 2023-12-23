@@ -47,4 +47,52 @@ https://www.youtube.com/watch?v=4x6V_r_XJBU
 
 ---
 # Gerar chave ssh
-ssh-keygen -t rsa -b 4096 -C "prof.marcelopontes@gmail.com"
+ssh-keygen -t rsa -b 4096 -C "e-mail"
+
+
+---
+
+---
+# Configuração VSCODE
+### Criar pasta .vscode na raiz do projeto e adicionar o arquivo settings.json
+
+{
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.organizeImports": true
+    },
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true
+}
+
+### Comando VSCODE 
+Ctrl + Shift + P para digitar comandos
+Simple Browser para abrir um navegador
+
+### Plugins
+Material Icon Theme
+---
+
+---
+# Shadcn-ui configurar componentes
+
+npx shadcn-ui@latest init
+npx shadcn-ui@latest add
+
+---
+
+---
+# AUTENTICAÇÃO E AUTORIZAÇÃO COM NEXT-AUTH
+
+npm install next-auth
+
+Parei aqui
+https://youtu.be/xTM9D-OS1ag?t=1364
+
+---
+
+# Nextjs Multi-Idioma
+https://youtu.be/Zy6vRMvQEng?list=PLR8OzKI52ppWoTRvAmB_FQPPlHS0otV7V
+
+---

@@ -1,0 +1,7 @@
+{
+    "server-component": {
+      "welcome": "Welcome"
+    },
+    "switcher-title": "Change language",
+    "current-locale": "Current locate"
+  }
