@@ -3,17 +3,19 @@
 import { Button } from '@/components/ui/button'
 // prettier-ignore
 import {
-    Form,
-    FormControl,
-    FormDescription,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage
 } from '@/components/ui/form'
 
 import { Input } from '@/components/ui/input'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
+import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 
@@ -36,6 +38,7 @@ const formSchema = z.object({
 })
 
 export default function LoginAccountForm() {
+  const router = useRouter()
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -45,7 +48,22 @@ export default function LoginAccountForm() {
   })
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    console.log(values)
+    try {
+      const supabase = createClientComponentClient()
+      const { email, password } = values
+      // eslint-disable-next-line no-unused-vars
+      const {
+        error,
+        data: { session }
+      } = await supabase.auth.signInWithPassword({
+        email,
+        password
+      })
+      form.reset()
+      router.refresh()
+    } catch (error) {
+      console.log('LoginAccountForm:onSubmit', error)
+    }
   }
 
   return (
@@ -77,14 +95,14 @@ export default function LoginAccountForm() {
               <FormItem>
                 <FormLabel>Password</FormLabel>
                 <FormControl>
-                  <Input placeholder="Password" {...field} />
+                  <Input type="password" placeholder="Password" {...field} />
                 </FormControl>
                 <FormDescription>This is your Password</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <Button type="submit">Create Account</Button>
+          <Button type="submit">Login</Button>
         </form>
       </Form>
     </div>
