@@ -69,6 +69,10 @@ ssh-keygen -t rsa -b 4096 -C "e-mail"
 ### Comando VSCODE 
 Ctrl + Shift + P para digitar comandos
 Simple Browser para abrir um navegador
+- CTRL+F2 selecionar e alterar palavras
+- alt + Shift + (seta para cima) para duplicar a linha
+
+
 
 ### Plugins
 Material Icon Theme
@@ -88,11 +92,23 @@ npx shadcn-ui@latest add
 npm install next-auth
 
 Parei aqui
-https://youtu.be/xTM9D-OS1ag?t=1364
+https://youtu.be/KHKpKR1NuaU?t=6499
 
 ---
 
 # Nextjs Multi-Idioma
 https://youtu.be/Zy6vRMvQEng?list=PLR8OzKI52ppWoTRvAmB_FQPPlHS0otV7V
 
+---
+
+---
+# Configuração do Git Flow
+
+git branch
+git flow init
+git flow feature start home_page
+
+
+
+https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 ---
