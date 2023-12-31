@@ -9,7 +9,7 @@ import localimagebrasil from '../../public/flags/brasil.png'
 import localimageespanha from '../../public/flags/espanha.png'
 import localimageusa from '../../public/flags/usa.png'
 
-export default function LocaleSwitcher(props) {
+export default function LocaleSwitcher(props: any) {
   const pathName = usePathname()
   const redirectedPathName = (locale: string) => {
     if (!pathName) return '/'
