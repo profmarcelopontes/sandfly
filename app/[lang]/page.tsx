@@ -32,7 +32,7 @@ export default async function Home({
   return (
     <div>
       <div>
-        <LocaleSwitcher />
+        <LocaleSwitcher idioma={dictionary} />
         <p className="font-bold m-1 p-1 border rounded-md bg-slate-300">
           {dictionary['server-component'].welcome}
         </p>

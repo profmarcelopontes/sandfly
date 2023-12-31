@@ -9,7 +9,7 @@ import localimagebrasil from '../../public/flags/brasil.png'
 import localimageespanha from '../../public/flags/espanha.png'
 import localimageusa from '../../public/flags/usa.png'
 
-export default function LocaleSwitcher() {
+export default function LocaleSwitcher(props) {
   const pathName = usePathname()
   const redirectedPathName = (locale: string) => {
     if (!pathName) return '/'
@@ -17,7 +17,6 @@ export default function LocaleSwitcher() {
     segments[1] = locale
     return segments.join('/')
   }
-
   return (
     <div>
       <div>
@@ -45,19 +44,19 @@ export default function LocaleSwitcher() {
                 href="#responsive-header"
                 className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
               >
-                Publications
+                {props.idioma['nav-bar-home'].publications}
               </a>
               <a
                 href="#responsive-header"
                 className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
               >
-                Contacts
+                {props.idioma['nav-bar-home'].contacts}
               </a>
               <a
                 href="#responsive-header"
                 className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
               >
-                About
+                {props.idioma['nav-bar-home'].about}
               </a>
             </div>
           </div>
