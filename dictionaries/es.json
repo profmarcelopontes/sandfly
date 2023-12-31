@@ -2,6 +2,11 @@
     "server-component": {
       "welcome": "¡Bienvenido!"
     },
+    "nav-bar-home": {
+      "publications": "Publicaciones",
+      "contacts": "Contactos",
+      "about": "Acerca"
+    },
     "switcher-title": "Cambiar el idioma",
     "current-locale": "Configuración regional actual"
   }
