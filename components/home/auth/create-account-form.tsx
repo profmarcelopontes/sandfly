@@ -19,25 +19,25 @@ import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 
-const formSchema = z.object({
-  email: z
-    .string({
-      required_error: 'E-mail is required'
-    })
-    .email({
-      message: 'Must be a valid email.'
-    }),
-  password: z
-    .string({
-      required_error: 'Password is required'
-    })
-    .min(8, {
-      message: 'Password must have lesat 8 characters.'
-    })
-    .max(12)
-})
-
-export default function CreateAccountForm() {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export default function CreateAccountForm(props: any) {
+  const formSchema = z.object({
+    email: z
+      .string({
+        required_error: props.idioma['message-error-email'].msgString
+      })
+      .email({
+        message: props.idioma['message-error-email'].msgEmail
+      }),
+    password: z
+      .string({
+        required_error: props.idioma['message-error-password'].msgString
+      })
+      .min(8, {
+        message: props.idioma['message-error-password'].msgMin8
+      })
+      .max(12)
+  })
   const router = useRouter()
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -77,7 +77,9 @@ export default function CreateAccountForm() {
 
   return (
     <div className="flex flex-col justify-center items-center space-y-2">
-      <span className="text-lg">You will love it.</span>
+      <span className="text-lg">
+        {props.idioma['create-account-form'].message}
+      </span>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
@@ -88,11 +90,19 @@ export default function CreateAccountForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>E-mail</FormLabel>
+                <FormLabel>
+                  {props.idioma['create-account-form'].email}
+                </FormLabel>
                 <FormControl>
-                  <Input placeholder="E-mail" {...field} />
+                  <Input
+                    placeholder={props.idioma['create-account-form'].email}
+                    {...field}
+                  />
                 </FormControl>
-                <FormDescription>This is your E-mail</FormDescription>
+                <FormDescription>
+                  {' '}
+                  {props.idioma['create-account-form'].messageEmail}
+                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -102,16 +112,26 @@ export default function CreateAccountForm() {
             name="password"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Password</FormLabel>
+                <FormLabel>
+                  {props.idioma['create-account-form'].password}
+                </FormLabel>
                 <FormControl>
-                  <Input type="password" placeholder="Password" {...field} />
+                  <Input
+                    type="password"
+                    placeholder={props.idioma['create-account-form'].password}
+                    {...field}
+                  />
                 </FormControl>
-                <FormDescription>This is your Password</FormDescription>
+                <FormDescription>
+                  {props.idioma['create-account-form'].messagePassword}
+                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <Button type="submit">Create Account</Button>
+          <Button className="bg-teal-500 " type="submit">
+            {props.idioma['create-account-form'].textButton}
+          </Button>
         </form>
       </Form>
     </div>

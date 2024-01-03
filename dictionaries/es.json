@@ -7,6 +7,31 @@
       "contacts": "Contactos",
       "about": "Acerca"
     },
+    "option-account": "Registar",
     "switcher-title": "Cambiar el idioma",
-    "current-locale": "Configuración regional actual"
+    "current-locale": "Configuración regional actual",
+    "create-account-form": {
+      "message": "Registrar correo electrónico.",
+      "email": "Correo electrónico",
+      "messageEmail": "Introduce tu correo electrónico.",
+      "password": "Contraseña",
+      "messagePassword": "Ingresa tu contraseña",
+      "textButton": "Crear una cuenta"
+    },
+    "login-account-form": {
+      "message": "Acceso al sistema.",
+      "email": "Correo electrónico",
+      "messageEmail": "Introduce tu correo electrónico.",
+      "password": "Contraseña",
+      "messagePassword": "Ingresa tu contraseña",
+      "textButton": "Acceso"
+    },
+    "message-error-email": {
+      "msgString": "Correo electronico es requerido",
+      "msgEmail": "Debe ser un correo electrónico válido"
+    },
+    "message-error-password": {
+      "msgString": "Se requiere contraseña",
+      "msgMin8": "La contraseña debe tener al menos 8 caracteres."
+    }
   }

@@ -7,6 +7,31 @@
       "contacts": "Contatos",
       "about": "Sobre"
     },
+    "option-account": "Cadastrar",
     "switcher-title": "Mudar idioma",
-    "current-locale": "Configuracão regional atual"
+    "current-locale": "Configuracão regional atual",
+    "create-account-form": {
+      "message": "Registre seu e-mail.",
+      "email": "E-mail",
+      "messageEmail": "Digite seu e-mail.",
+      "password": "Senha",
+      "messagePassword": "Digite sua senha",
+      "textButton": "Criar uma conta"
+    },
+    "login-account-form": {
+      "message": "Entre seu e-mail.",
+      "email": "E-mail",
+      "messageEmail": "Digite seu e-mail.",
+      "password": "Senha",
+      "messagePassword": "Digite sua senha",
+      "textButton": "Entrar"
+    },
+    "message-error-email": {
+      "msgString": "O e-mail é obrigatório",
+      "msgEmail": "Deve ser um e-mail válido"
+    },
+    "message-error-password": {
+      "msgString": "Senha obrigatórias",
+      "msgMin8": "A senha deve ter pelo menos 8 caracteres"
+    }
   }
