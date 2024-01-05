@@ -8,6 +8,31 @@
       "about": "About"
     },
     "switcher-title": "Change language",
-    "current-locale": "Current locate"
+    "current-locale": "Current locate",
+    "option-account": "Register",
+    "create-account-form": {
+      "message": "Register your email.",
+      "email": "E-mail",
+      "messageEmail": "Enter your email.",
+      "password": "Password",
+      "messagePassword": "Enter your password",
+      "textButton": "Create Account"
+    },
+    "login-account-form": {
+      "message": "System access.",
+      "email": "E-mail",
+      "messageEmail": "Enter your email.",
+      "password": "Password",
+      "messagePassword": "Enter your password",
+      "textButton": "Login"
+    },
+    "message-error-email": {
+      "msgString": "E-mail is required",
+      "msgEmail": "Must be a valid email"
+    },
+    "message-error-password": {
+      "msgString": "Password is required",
+      "msgMin8": "Password must have lesat 8 characters"
+    }
    
   }

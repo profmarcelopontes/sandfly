@@ -19,25 +19,25 @@ import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 
-const formSchema = z.object({
-  email: z
-    .string({
-      required_error: 'E-mail is required'
-    })
-    .email({
-      message: 'Must be a valid email.'
-    }),
-  password: z
-    .string({
-      required_error: 'Password is required'
-    })
-    .min(8, {
-      message: 'Password must have lesat 8 characters.'
-    })
-    .max(12)
-})
-
-export default function LoginAccountForm() {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export default function LoginAccountForm(props: any) {
+  const formSchema = z.object({
+    email: z
+      .string({
+        required_error: props.idioma['message-error-email'].msgString
+      })
+      .email({
+        message: props.idioma['message-error-email'].msgEmail
+      }),
+    password: z
+      .string({
+        required_error: props.idioma['message-error-password'].msgString
+      })
+      .min(8, {
+        message: props.idioma['message-error-password'].msgMin8
+      })
+      .max(12)
+  })
   const router = useRouter()
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -51,14 +51,14 @@ export default function LoginAccountForm() {
     try {
       const supabase = createClientComponentClient()
       const { email, password } = values
-      // eslint-disable-next-line no-unused-vars
-      const {
-        error,
-        data: { session }
+      /* eslint-disable */
+      const { error, data: { session }
+      /* eslint-enable */
       } = await supabase.auth.signInWithPassword({
         email,
         password
       })
+
       form.reset()
       router.refresh()
     } catch (error) {
@@ -68,7 +68,7 @@ export default function LoginAccountForm() {
 
   return (
     <div className="flex flex-col justify-center items-center space-y-2">
-      <span className="text-lg">It is good to see you again.</span>
+      <span className="text-lg">{props.idioma['login-account-form'].message}</span>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
@@ -79,11 +79,11 @@ export default function LoginAccountForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>E-mail</FormLabel>
+                <FormLabel>{props.idioma['login-account-form'].email}</FormLabel>
                 <FormControl>
-                  <Input placeholder="E-mail" {...field} />
+                  <Input placeholder={props.idioma['create-account-form'].email} {...field} />
                 </FormControl>
-                <FormDescription>This is your E-mail</FormDescription>
+                <FormDescription>{props.idioma['create-account-form'].messageEmail}</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -93,16 +93,18 @@ export default function LoginAccountForm() {
             name="password"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Password</FormLabel>
+                <FormLabel>{props.idioma['create-account-form'].password}</FormLabel>
                 <FormControl>
-                  <Input type="password" placeholder="Password" {...field} />
+                  <Input type="password" placeholder={props.idioma['create-account-form'].password} {...field} />
                 </FormControl>
-                <FormDescription>This is your Password</FormDescription>
+                <FormDescription>{props.idioma['create-account-form'].messagePassword}</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <Button type="submit">Login</Button>
+          <Button className="bg-teal-500" type="submit">
+            {props.idioma['login-account-form'].textButton}
+          </Button>
         </form>
       </Form>
     </div>

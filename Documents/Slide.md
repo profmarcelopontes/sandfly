@@ -26,6 +26,27 @@ https://jestjs.io/pt-BR/docs/getting-started
 https://testing-library.com/docs/react-testing-library/intro/
 
 ---
+# Criar Profile Supabase
+##Criar função
+create_profile_for_new_users
+
+Schema: public
+
+Return type: trigger
+
+begin
+insert into public.profiles(id, email)
+values (
+  new.id,
+  new.email
+);
+return new;
+end;
+
+## criar a trigger
+create trigger on_auth_users_insert after insert on auth.users for each row execute function create_profile_for_new_users();
+
+---
 # Nextjs pacotes supabase
 
 npm i @supabase/auth-helpers-nestjs @supabase/supabase-js
@@ -39,6 +60,8 @@ npx prisma init
 
 ## Criar a migração do modelo
 npx prisma migrate dev --name create_tb_students
+npx prisma migrate dev --name create_tb_profiles
+npx prisma migrate dev --name update_tb_profiles
 
 Ver vídeos:
 https://www.youtube.com/watch?v=4x6V_r_XJBU

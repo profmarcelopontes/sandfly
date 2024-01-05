@@ -18,3 +18,16 @@ model Student {
 
   @@map("students")
 }
+enum Role {
+  admin
+  user
+}
+
+model Profile {
+  id String @id @default(uuid()) @db.Uuid
+  email String? @db.VarChar(50) 
+  username String? @db.VarChar(50)
+  role  Role   @default(user)
+
+  @@map("profiles")
+}

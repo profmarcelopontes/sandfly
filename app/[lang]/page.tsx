@@ -6,7 +6,9 @@ import { Locale } from '@/i18n-config'
 import { getDictionary } from '@/lib/get-dictionary'
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 import { cookies } from 'next/headers'
-import { RedirectType, redirect } from 'next/navigation'
+import { redirect } from 'next/navigation'
+//import { RedirectType, redirect } from 'next/navigation'
+import { RedirectType } from 'next/dist/client/components/redirect'
 
 export default async function Home({
   params: { lang }
@@ -38,27 +40,27 @@ export default async function Home({
         </p>
       </div>
 
-      <div className="flex flex-col h-screen w-full justify-center items-center">
+      <div className="flex flex-col h-screen w-full justify-center items-center ">
         <Tabs
-          defaultValue="create-account"
+          defaultValue="login"
           className="w-[400px] border rounded-md pb-4 shadow-2xl"
         >
-          <TabsList className="flex justify-around items-center rounded-b-none h-14">
+          <TabsList className="flex justify-around items-center rounded-b-none h-14 bg-teal-500">
             <TabsTrigger
               value="create-account"
               className="transition-all delay-150"
             >
-              Account
+              {dictionary['option-account']}
             </TabsTrigger>
             <TabsTrigger value="login" className="transition-all delay-150">
               Login
             </TabsTrigger>
           </TabsList>
           <TabsContent value="create-account">
-            <CreateAccountForm />
+            <CreateAccountForm idioma={dictionary} />
           </TabsContent>
           <TabsContent value="login">
-            <LoginAccountForm />
+            <LoginAccountForm idioma={dictionary} />
           </TabsContent>
         </Tabs>
       </div>
