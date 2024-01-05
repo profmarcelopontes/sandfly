@@ -60,13 +60,16 @@ export default function CreateAccountForm(props: any) {
         // prettier-ignore
       } = await supabase.auth.signUp({
         email,
-        password,
-        options: { emailRedirectTo: `${location.origin}/auth/callback` }
+        password
+        //opção para confirmar email, modificar também o router.push mais abaixo
+        //options: { emailRedirectTo: `${location.origin}/auth/callback` }
       })
 
       if (user) {
         form.reset()
-        router.push('/')
+        //opção para confirmar email
+        //router.push('/')
+        router.refresh()
       } else {
         console.log('Teste User: ', user)
       }

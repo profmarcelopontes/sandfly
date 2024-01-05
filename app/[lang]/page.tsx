@@ -6,7 +6,9 @@ import { Locale } from '@/i18n-config'
 import { getDictionary } from '@/lib/get-dictionary'
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 import { cookies } from 'next/headers'
-import { RedirectType, redirect } from 'next/navigation'
+import { redirect } from 'next/navigation'
+//import { RedirectType, redirect } from 'next/navigation'
+import { RedirectType } from 'next/dist/client/components/redirect'
 
 export default async function Home({
   params: { lang }
