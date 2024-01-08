@@ -20,6 +20,7 @@
     },
     "login-account-form": {
       "message": "System access.",
+      "errorLogin": "ERROR: Login or password not is correct",
       "email": "E-mail",
       "messageEmail": "Enter your email.",
       "password": "Password",

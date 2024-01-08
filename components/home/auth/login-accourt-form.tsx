@@ -12,6 +12,8 @@ import {
   FormMessage
 } from '@/components/ui/form'
 
+import { useState } from 'react'
+
 import { Input } from '@/components/ui/input'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
@@ -47,6 +49,12 @@ export default function LoginAccountForm(props: any) {
     }
   })
 
+  const [login, setLogin] = useState('')
+
+  const stateLogin = (message_login:string) => {
+    setLogin(message_login)
+  }
+
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       const supabase = createClientComponentClient()
@@ -58,6 +66,13 @@ export default function LoginAccountForm(props: any) {
         email,
         password
       })
+      if(error) {
+        console.log("Error: ", error)
+        stateLogin(props.idioma['login-account-form'].errorLogin)
+      }else{
+        stateLogin("Sucesso")
+        console.log("Success")
+      }
 
       form.reset()
       router.refresh()
@@ -69,6 +84,7 @@ export default function LoginAccountForm(props: any) {
   return (
     <div className="flex flex-col justify-center items-center space-y-2">
       <span className="text-lg">{props.idioma['login-account-form'].message}</span>
+      <span className="text-sm text-red-500">{login}</span>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
@@ -106,7 +122,9 @@ export default function LoginAccountForm(props: any) {
             {props.idioma['login-account-form'].textButton}
           </Button>
         </form>
+
       </Form>
+      
     </div>
   )
 }

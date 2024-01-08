@@ -48,11 +48,11 @@ export default async function Home({
           <TabsList className="flex justify-around items-center rounded-b-none h-14 bg-teal-500">
             <TabsTrigger
               value="create-account"
-              className="transition-all delay-150"
+              className="text-white transition-all delay-150"
             >
               {dictionary['option-account']}
             </TabsTrigger>
-            <TabsTrigger value="login" className="transition-all delay-150">
+            <TabsTrigger value="login" className="text-white transition-all delay-150">
               Login
             </TabsTrigger>
           </TabsList>
