@@ -20,6 +20,7 @@
     },
     "login-account-form": {
       "message": "Acceso al sistema.",
+      "errorLogin": "ERROR: El inicio de sesión o la contraseña no es correcta",
       "email": "Correo electrónico",
       "messageEmail": "Introduce tu correo electrónico.",
       "password": "Contraseña",

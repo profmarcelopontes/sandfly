@@ -19,7 +19,8 @@
       "textButton": "Criar uma conta"
     },
     "login-account-form": {
-      "message": "Entre seu e-mail.",
+      "message": "Entre com seu e-mail.",
+      "errorLogin": "ERROR: login ou senha estão incorretos",
       "email": "E-mail",
       "messageEmail": "Digite seu e-mail.",
       "password": "Senha",
