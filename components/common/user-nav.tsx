@@ -23,6 +23,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu"
+import Link from 'next/link'
 
 
 
@@ -78,7 +79,7 @@ import {
                     <DropdownMenuSeparator />
                     <DropdownMenuGroup>
                         <DropdownMenuItem>
-                            Perfil
+                            <Link href='/user-app/profile'>Perfil</Link>
                         </DropdownMenuItem>
                     </DropdownMenuGroup>
                     <DropdownMenuSeparator />

@@ -115,7 +115,11 @@ npx shadcn-ui@latest add
 npm install next-auth
 
 Parei aqui
+<<<<<<< HEAD
 https://youtu.be/KHKpKR1NuaU?t=10536
+=======
+https://youtu.be/KHKpKR1NuaU?t=11244
+>>>>>>> develop
 
 ---
 

@@ -1,11 +1,17 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
+import React from "react"
 
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
     className?: string
 }
 
 export function Sidebar({ className }: SidebarProps) {
+
+
   return (
     <div className={cn("pb-2", className)}>
       <div className="space-y-4 py-4">
@@ -30,8 +36,9 @@ export function Sidebar({ className }: SidebarProps) {
               </svg>
               Listen Now
             </Button> */}
-            <Button variant="ghost" className="w-full justify-start text-teal-500">
-              Artigos científicos
+            
+            <Button asChild variant="ghost" className="w-full justify-start text-teal-500">
+              <Link href='/user-app/articles'>Artigos científicos</Link>
             </Button>
             <Button variant="ghost" className="w-full justify-start text-teal-500">
               Notas Científicas
