@@ -34,5 +34,8 @@
     "message-error-password": {
       "msgString": "Se requiere contraseña",
       "msgMin8": "La contraseña debe tener al menos 8 caracteres."
+    },
+    "article": {
+      "scientificArticles": "Artículos científicos"
     }
   }

@@ -39,21 +39,7 @@ export default function Articles(){
                         <span>Brazilian Journal of Medical and Biological Research 43, 310-315</span>
                     </div>
                 </div>
-
-                {/* <div className="p-2">
-                    <Link className="no-underline hover:underline text-lg text-blue-800" href={''} target="_blank">
-                        G ...
-                    </Link>
-                    <div className="flex flex-col text-sm">
-                        <span> ...</span>
-                        <span> </span>
-                    </div>
-                </div> */}
-
-            </div>
-            
-
-            
+            </div>   
         </>
     )
 }

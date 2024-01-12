@@ -34,6 +34,8 @@
     "message-error-password": {
       "msgString": "Password is required",
       "msgMin8": "Password must have lesat 8 characters"
+    },
+    "article": {
+      "scientificArticles": "Scientific articles"
     }
-   
   }

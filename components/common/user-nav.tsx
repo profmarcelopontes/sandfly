@@ -1,12 +1,8 @@
 "use client"
 
 import { User, createClientComponentClient } from '@supabase/auth-helpers-nextjs'
-
-import { useEffect, useState } from 'react'
-
 import { useRouter } from 'next/navigation'
-
-
+import { useEffect, useState } from 'react'
 
 import {
     Avatar,
@@ -25,10 +21,6 @@ import {
 } from "@/components/ui/dropdown-menu"
 import Link from 'next/link'
 
-
-
-
-  
   export function UserNav() {
  
     const [user, setUser] = useState<User | null>()

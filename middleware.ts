@@ -14,7 +14,7 @@ function getLocale(request: NextRequest): string | undefined {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore locales são readonly
   const locales: string[] = i18n.locales
-  console.log('Headers: ', negotiatorHeaders)
+  // console.log('Headers: ', negotiatorHeaders)
 
   // Use negotiator e intl-localematcher para obter a melhor localidade
   const languages = new Negotiator({ headers: negotiatorHeaders }).languages(

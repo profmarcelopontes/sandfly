@@ -9,6 +9,7 @@ import localimagebrasil from '../../public/flags/brasil.png'
 import localimageespanha from '../../public/flags/espanha.png'
 import localimageusa from '../../public/flags/usa.png'
 
+
 export default function LocaleSwitcher(props: any) {
   const pathName = usePathname()
   const redirectedPathName = (locale: string) => {
@@ -23,7 +24,7 @@ export default function LocaleSwitcher(props: any) {
         <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
           <div className="flex items-center flex-shrink-0 text-white mr-6">
             <span className="font-semibold text-xl tracking-tight">
-              SandFly
+              <Link href={'/'}>SandFly</Link>
             </span>
           </div>
           <div className="block lg:hidden">
@@ -44,7 +45,9 @@ export default function LocaleSwitcher(props: any) {
                 href="#responsive-header"
                 className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
               >
-                {props.idioma['nav-bar-home'].publications}
+                {/* <Link href={'/articles'}>{props.idioma['nav-bar-home'].publications}</Link> */}
+                <Link href={`${pathName}/articles`}>{props.idioma['nav-bar-home'].publications}</Link>
+                
               </a>
               <a
                 href="#responsive-header"
