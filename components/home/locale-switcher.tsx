@@ -41,26 +41,9 @@ export default function LocaleSwitcher(props: any) {
           </div>
           <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
             <div className="text-sm lg:flex-grow">
-              <a
-                href="#responsive-header"
-                className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-              >
-                {/* <Link href={'/articles'}>{props.idioma['nav-bar-home'].publications}</Link> */}
-                <Link href={`${pathName}/articles`}>{props.idioma['nav-bar-home'].publications}</Link>
-                
-              </a>
-              <a
-                href="#responsive-header"
-                className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-              >
-                {props.idioma['nav-bar-home'].contacts}
-              </a>
-              <a
-                href="#responsive-header"
-                className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
-              >
-                {props.idioma['nav-bar-home'].about}
-              </a>
+                <Link href={`${pathName}/articles`} className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">{props.idioma['nav-bar-home'].publications}</Link>
+                <Link href={`${pathName}/contacts`} className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">{props.idioma['nav-bar-home'].contacts}</Link>
+                <Link href={`${pathName}/about`} className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">{props.idioma['nav-bar-home'].about}</Link>
             </div>
           </div>
           <div className="flex flex-1 justify-center items-center gap-2">

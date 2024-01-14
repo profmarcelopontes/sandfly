@@ -7,6 +7,7 @@ declare global {
       NEXTAUTH_SECRET: string
       GITHUB_ID: string
       GITHUB_SECRET: string
+      RESEND_API_KEY: string
     }
   }
 }

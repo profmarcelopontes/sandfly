@@ -35,7 +35,27 @@
       "msgString": "Password is required",
       "msgMin8": "Password must have lesat 8 characters"
     },
+    "message-error-string": {
+      "msgString": "Text is required",
+      "requerid": "Required field"
+    },
     "article": {
       "scientificArticles": "Scientific articles"
+    },
+    "contact": {
+      "message": "Contact Form",
+      "name": "Name",
+      "messageName": "Enter your name.",
+      "email": "Email",
+      "messageEmail": "Enter your email.",
+      "subject": "Subject",
+      "messageSubject": "Enter with the subject.",
+      "textArea": "Text",
+      "messageTextArea": "Your message will be copied to the support team.",
+      "textButton": "Send"
+    },
+    "alerts": {
+      "alertTitle": "Success",
+      "alertDescription": "Your operation was successful."
     }
   }

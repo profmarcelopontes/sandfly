@@ -35,7 +35,27 @@
       "msgString": "Se requiere contraseña",
       "msgMin8": "La contraseña debe tener al menos 8 caracteres."
     },
+    "message-error-string": {
+      "msgString": "Se requiere texto",
+      "requerid": "Campo obrigatorio"
+    },
     "article": {
       "scientificArticles": "Artículos científicos"
+    },
+    "contact": {
+      "message": "Formulario de contacto",
+      "name": "Nombre",
+      "messageName": "Introduzca su nombre.",
+      "email": "Email",
+      "subject": "Asunto",
+      "messageSubject": "Entra con el asunto.",
+      "messageEmail": "Introduce tu correo electrónico.",
+      "textArea": "Texto",
+      "messageTextArea": "Su mensaje será copiado al equipo de soporte.",
+      "textButton": "Mandar"
+    },
+    "alerts": {
+      "alertTitle": "Éxito",
+      "alertDescription": "Su operación fue exitosa."
     }
   }

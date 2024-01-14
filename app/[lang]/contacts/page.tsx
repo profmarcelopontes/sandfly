@@ -1,3 +1,4 @@
+import ContactForm from "@/components/home/contacts"
 import LocaleSwitcher from "@/components/home/locale-switcher"
 import { Locale } from '@/i18n-config'
 import { getDictionary } from '@/lib/get-dictionary'
@@ -12,13 +13,8 @@ export default async function Contact({
     return(
         <>
             <LocaleSwitcher idioma={dictionary} />
-            <div className="container mx-auto">
-                <h1 className="text-4xl text-gray-400 p-2">
-                    {dictionary['article'].scientificArticles}
-                </h1>
-                <div className="p-4 rounded-md border border-spacing-4 border-gray-500 ">
-                    <h1 className="text-5xl sm:text-7xl text-white uppercase pt-12">Contact</h1>
-                </div>  
+            <div className="container w-[400px] border rounded-md pt-4 shadow-2xl p-2 mt-10">
+                <ContactForm idioma={dictionary} />
             </div>
  
         </>

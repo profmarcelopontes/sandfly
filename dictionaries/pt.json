@@ -35,7 +35,27 @@
       "msgString": "Senha obrigatórias",
       "msgMin8": "A senha deve ter pelo menos 8 caracteres"
     },
+    "message-error-string": {
+      "msgString": "Texto obrigatório",
+      "requerid": "Campo obrigatório"
+    },
     "article": {
       "scientificArticles": "Artigos Científicos"
+    },
+    "contact": {
+      "message": "Formulário de Contato",
+      "name": "Nome",
+      "messageName": "Digite seu nome.",
+      "email": "Email",
+      "messageEmail": "Digite seu e-mail.",
+      "subject": "Assunto",
+      "messageSubject": "Entra com o assunto.",
+      "textArea": "Texto",
+      "messageTextArea": "Sua mensagem será copiada para a equipe de suporte.",
+      "textButton": "Enviar"
+    },
+    "alerts": {
+      "alertTitle": "Sucesso",
+      "alertDescription": "Sua operação foi bem-sucedida."
     }
   }
